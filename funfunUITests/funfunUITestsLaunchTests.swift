@@ -1,13 +1,13 @@
 //
-//  FunUITestsLaunchTests.swift
-//  FunUITests
+//  funfunUITestsLaunchTests.swift
+//  funfunUITests
 //
 //  Created by Gabriel Oliva on 15/10/21.
 //
 
 import XCTest
 
-class FunUITestsLaunchTests: XCTestCase {
+class funfunUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
