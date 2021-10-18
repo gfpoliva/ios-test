@@ -16,8 +16,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Check simulators
+      - name: Check Simulators
         run: instruments -s devices
+      - name: Xcode Version
+        run: xcodebuild -version
+      - name: Availables SDKs
+        run: xcodebuild -showsdks
       - name: Build and test
         run: |
           xcodebuild clean test \
