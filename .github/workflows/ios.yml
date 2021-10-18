@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Test
-    runs-on: macOS-11
+    runs-on: macOS-latest
     strategy:
         matrix:
           destination: ['platform=iOS Simulator,OS=14.5,name=iPhone 11']
