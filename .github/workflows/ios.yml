@@ -12,7 +12,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,OS=15.0,name=iPhone X']
+          destination: ['platform=iOS Simulator,OS=15.0,name=iPhone 12']
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -21,7 +21,7 @@ jobs:
           xcodebuild clean test \
             -project funfun.xcodeproj \
             -scheme funfun \
-            -destination 'platform=iOS Simulator,OS=15.0,name=iPhone X' \
+            -destination "${destination}" \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
           bash <(curl -s https://codecov.io/bash)
